@@ -7,11 +7,12 @@
 [ext_resource type="AudioStream" uid="uid://b0d0vdy4hddkc" path="res://Assets/Sound/book_page-45210.mp3" id="5_qlcm7"]
 
 [node name="Gua" type="Control"]
-custom_minimum_size = Vector2(750, 1000)
+custom_minimum_size = Vector2(562.5, 750)
 layout_mode = 3
 anchors_preset = 0
 size_flags_vertical = 4
 script = ExtResource("1_3dgw6")
+type = 1
 length = 600
 width = 50
 separation = 15
@@ -24,6 +25,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_o6ah2")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="MarginContainer" type="MarginContainer" parent="Frame"]
 layout_mode = 1
@@ -32,9 +35,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 150
+theme_override_constants/margin_left = 250
 theme_override_constants/margin_top = 125
-theme_override_constants/margin_right = 150
+theme_override_constants/margin_right = 250
 theme_override_constants/margin_bottom = 125
 
 [node name="HBoxContainer" type="VBoxContainer" parent="Frame/MarginContainer"]
@@ -44,44 +47,56 @@ alignment = 1
 [node name="Yao1" type="TextureRect" parent="Frame/MarginContainer/HBoxContainer"]
 visible = false
 modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(420, 87.5)
+custom_minimum_size = Vector2(325, 75)
 layout_mode = 2
 texture = ExtResource("3_4tgqi")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="Yao2" type="TextureRect" parent="Frame/MarginContainer/HBoxContainer"]
 visible = false
 modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(420, 87.5)
+custom_minimum_size = Vector2(325, 75)
 layout_mode = 2
 texture = ExtResource("3_4tgqi")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="Yao3" type="TextureRect" parent="Frame/MarginContainer/HBoxContainer"]
 visible = false
 modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(420, 87.5)
+custom_minimum_size = Vector2(325, 75)
 layout_mode = 2
 texture = ExtResource("4_114i0")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="Yao4" type="TextureRect" parent="Frame/MarginContainer/HBoxContainer"]
 visible = false
 modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(420, 87.5)
+custom_minimum_size = Vector2(325, 75)
 layout_mode = 2
 texture = ExtResource("3_4tgqi")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="Yao5" type="TextureRect" parent="Frame/MarginContainer/HBoxContainer"]
 visible = false
 modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(420, 87.5)
+custom_minimum_size = Vector2(325, 75)
 layout_mode = 2
 texture = ExtResource("4_114i0")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="Yao6" type="TextureRect" parent="Frame/MarginContainer/HBoxContainer"]
 visible = false
 modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(420, 87.5)
+custom_minimum_size = Vector2(325, 75)
 layout_mode = 2
 texture = ExtResource("3_4tgqi")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="ShowYao" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_qlcm7")

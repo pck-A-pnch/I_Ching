@@ -40,7 +40,6 @@ func flip():
 	else:
 		Global.binary = 0
 	
-	Global.id += str(Global.binary)
 	
 	flip_b.disabled = false
 	flip_b.text = "LANCIA!"
@@ -48,7 +47,7 @@ func flip():
 	
 	if Global.yao == 6:
 		flip_b.disabled = true
-		await get_tree().create_timer(1.0).timeout
+		await get_tree().create_timer(0.5).timeout
 		show_board.emit()
 
 

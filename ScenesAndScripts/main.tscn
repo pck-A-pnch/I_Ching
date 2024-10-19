@@ -114,8 +114,7 @@ anchor_bottom = 1.0
 offset_top = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 20
-alignment = 1
+theme_override_constants/separation = 65
 metadata/_edit_use_anchors_ = true
 
 [node name="Question" type="LineEdit" parent="MiddleSection"]
@@ -133,19 +132,23 @@ clear_button_enabled = true
 layout_mode = 2
 size_flags_vertical = 0
 mouse_filter = 2
-theme_override_constants/separation = 100
 alignment = 1
 
 [node name="Gua" parent="MiddleSection/MiddleSection" instance=ExtResource("3_kjeip")]
-custom_minimum_size = Vector2(637.5, 850)
 layout_mode = 2
 
 [node name="CoinFlipper" parent="MiddleSection/MiddleSection" instance=ExtResource("3_3fbkc")]
 custom_minimum_size = Vector2(800, 0)
 layout_mode = 2
 
+[node name="Gua2" parent="MiddleSection/MiddleSection" instance=ExtResource("3_kjeip")]
+layout_mode = 2
+type = 2
+
 [node name="ResultBoard" parent="." instance=ExtResource("6_k1x1a")]
 layout_mode = 1
+offset_top = 216.0
+offset_bottom = -56.0
 
 [node name="UpSection" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -195,15 +198,15 @@ theme_override_font_sizes/font_size = 32
 text = "1.0 - Edoardo Albanese"
 
 [node name="Mute" type="TextureButton" parent="DownSection"]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -128.0
-offset_top = -128.0
+offset_left = -100.0
+offset_top = -100.0
 grow_horizontal = 0
 grow_vertical = 0
 toggle_mode = true
@@ -213,8 +216,10 @@ ignore_texture_size = true
 stretch_mode = 4
 
 [connection signal="draw_yao" from="MiddleSection/MiddleSection/CoinFlipper" to="MiddleSection/MiddleSection/Gua" method="show_yao"]
+[connection signal="draw_yao" from="MiddleSection/MiddleSection/CoinFlipper" to="MiddleSection/MiddleSection/Gua2" method="show_yao"]
 [connection signal="show_board" from="MiddleSection/MiddleSection/CoinFlipper" to="ResultBoard" method="_on_coin_flipper_show_board"]
 [connection signal="reset" from="ResultBoard" to="MiddleSection/MiddleSection/Gua" method="_on_result_board_reset"]
 [connection signal="reset" from="ResultBoard" to="MiddleSection/MiddleSection/CoinFlipper" method="_on_reset"]
+[connection signal="reset" from="ResultBoard" to="MiddleSection/MiddleSection/Gua2" method="_on_result_board_reset"]
 [connection signal="pressed" from="UpSection/Exit" to="." method="_on_exit_pressed"]
 [connection signal="toggled" from="DownSection/Mute" to="." method="_on_mute_toggled"]

@@ -4,3 +4,6 @@ res://ScenesAndScripts/coin_flipper.tscn
 res://ScenesAndScripts/gua.tscn
 res://ScenesAndScripts/result_board.tscn
 res://ScenesAndScripts/coin_flipper.gd
+res://ScenesAndScripts/gua.gd
+res://ScenesAndScripts/Global.gd
+res://ScenesAndScripts/main.gd
