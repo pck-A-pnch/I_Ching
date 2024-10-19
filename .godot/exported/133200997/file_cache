@@ -1,8 +1,9 @@
-res://ScenesAndScripts/background.tscn::2bb43b4f806124c3412e1a796e8f25ca::1728317277::res://.godot/exported/133200997/export-07dbc52dc9ea3f5771f17427b38b3a1f-background.scn
-res://ScenesAndScripts/coin_flipper.tscn::a133ec9fc4e23b936aec07802ca620ac::1728317277::res://.godot/exported/133200997/export-d8d52ba4ebf99a427f6d20c899e9a6f5-coin_flipper.scn
-res://ScenesAndScripts/gua.tscn::2da90d4fb361257d19f702f06e8cc3e2::1728317277::res://.godot/exported/133200997/export-5c10c2ae95cfdb9355b9ae47e32fefa3-gua.scn
-res://ScenesAndScripts/main.tscn::546a9f106b0855e19f9246a321b23711::1728317277::res://.godot/exported/133200997/export-461cdc8ee818ad761fa0c2586f82e5b3-main.scn
+res://ScenesAndScripts/background.tscn::2bb43b4f806124c3412e1a796e8f25ca::1729371056::res://.godot/exported/133200997/export-07dbc52dc9ea3f5771f17427b38b3a1f-background.scn
+res://ScenesAndScripts/coin_flipper.tscn::97d347fe57085c6541291291a6230fb3::1729371056::res://.godot/exported/133200997/export-d8d52ba4ebf99a427f6d20c899e9a6f5-coin_flipper.scn
+res://ScenesAndScripts/gua.tscn::401befc04e17d774d8198c9913a29dd3::1729371056::res://.godot/exported/133200997/export-5c10c2ae95cfdb9355b9ae47e32fefa3-gua.scn
+res://ScenesAndScripts/main.tscn::2c19d10d1aaca75e4ce745b7af674dca::1729371056::res://.godot/exported/133200997/export-461cdc8ee818ad761fa0c2586f82e5b3-main.scn
 res://ScenesAndScripts/Titles.tres::fe52a8acfecaa4bef529578a2ac57482::1728316646::res://.godot/exported/133200997/export-cc06a99cca9a2a6b44ea7e85a295f314-Titles.res
-res://ScenesAndScripts/result_board.tscn::60c8827e186bf906315172ea88039251::1728317278::res://.godot/exported/133200997/export-cc2267f288ce58aab6c74b5e8ddf7262-result_board.scn
-res://ScenesAndScripts/2nd text.tres::b74b8d1bf6cda9ad2c4e5170f14da747::1728316839::res://.godot/exported/133200997/export-7f296c5dfe9be60441d34b12e3146616-2nd text.res
+res://ScenesAndScripts/result_board.tscn::a3ba3abf0c8557654deadeca4bc45131::1729371056::res://.godot/exported/133200997/export-cc2267f288ce58aab6c74b5e8ddf7262-result_board.scn
+res://ScenesAndScripts/2nd text.tres::b74b8d1bf6cda9ad2c4e5170f14da747::1729344637::res://.godot/exported/133200997/export-7f296c5dfe9be60441d34b12e3146616-2nd text.res
 res://default_bus_layout.tres::57eecb0e963457bd2b1bdfce6db06a43::1727363198::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
+res://ScenesAndScripts/Buttons.tres::63e85a0516eee8f9426f540199d42a9b::1729345457::res://.godot/exported/133200997/export-cfffbceddf64c0f389e40412b5a88d39-Buttons.res
