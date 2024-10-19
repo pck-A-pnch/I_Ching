@@ -1,3 +1,6 @@
+Button
+HBoxContainer
+Label
 ResourcePreloader
 LineEdit
 VBoxContainer
@@ -5,11 +8,7 @@ TextureButton
 Control
 Node
 AudioStreamPlayer
-Label
 ScrollContainer
 TextureRect
 Panel
 PanelContainer
-Button
-AnimationPlayer
-MarginContainer

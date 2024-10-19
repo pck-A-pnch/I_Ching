@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://2y3obxro55qh"]
+
+[ext_resource type="FontFile" uid="uid://ddegh0j6c43hy" path="res://Assets/Fonts/Cheese Burger.otf" id="1_1jn2b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jpln"]
+bg_color = Color(0.842827, 0.674892, 0.12487, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.72742, 0.565136, 0.0336218, 1)
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+
+[resource]
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_1jn2b")
+Button/styles/normal = SubResource("StyleBoxFlat_4jpln")

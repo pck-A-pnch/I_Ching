@@ -7,3 +7,6 @@ res://ScenesAndScripts/coin_flipper.gd
 res://ScenesAndScripts/gua.gd
 res://ScenesAndScripts/Global.gd
 res://ScenesAndScripts/main.gd
+res://ScenesAndScripts/2nd text.tres
+res://ScenesAndScripts/TextManager.gd
+res://ScenesAndScripts/Buttons.tres

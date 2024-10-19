@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://dhxqdfxt4k8xn"]
+[gd_scene load_steps=26 format=3 uid="uid://dhxqdfxt4k8xn"]
 
 [ext_resource type="Script" path="res://ScenesAndScripts/result_board.gd" id="1_08047"]
 [ext_resource type="Theme" uid="uid://ctsjp2t1ym3el" path="res://ScenesAndScripts/Titles.tres" id="1_ndlyx"]
 [ext_resource type="Script" path="res://ScenesAndScripts/TextManager.gd" id="2_ltu7v"]
 [ext_resource type="Theme" uid="uid://d0sncsyvw210a" path="res://ScenesAndScripts/2nd text.tres" id="3_ai7yt"]
+[ext_resource type="FontFile" uid="uid://ddegh0j6c43hy" path="res://Assets/Fonts/Cheese Burger.otf" id="3_yxhbc"]
 [ext_resource type="FontFile" uid="uid://bvyetbh4mdef1" path="res://Assets/Fonts/RoundStyle-Bold.ttf" id="4_d64nc"]
 [ext_resource type="AudioStream" uid="uid://mxpyqy1irpks" path="res://Assets/Sound/UIClickNegative.mp3" id="6_ejlu1"]
 [ext_resource type="AudioStream" uid="uid://g5bt64hhi6hi" path="res://Assets/Sound/fast-whoosh-118248.mp3" id="7_0vdtw"]
@@ -25,6 +26,56 @@ corner_radius_bottom_left = 100
 [sub_resource type="Theme" id="Theme_hrjuh"]
 Panel/styles/panel = SubResource("StyleBoxFlat_id6sh")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6u6d"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q51jd"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.380392, 0.380392, 0.380392, 1)
+corner_radius_top_left = 25
+corner_radius_bottom_left = 25
+expand_margin_top = 5.0
+
+[sub_resource type="Theme" id="Theme_i2fll"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 10
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("3_yxhbc")
+Button/styles/focus = SubResource("StyleBoxFlat_x6u6d")
+Button/styles/hover = SubResource("StyleBoxFlat_q51jd")
+Button/styles/normal = SubResource("StyleBoxFlat_q51jd")
+Button/styles/pressed = SubResource("StyleBoxFlat_q51jd")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmq4u"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv0gy"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.380392, 0.380392, 0.380392, 1)
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+expand_margin_top = 5.0
+
+[sub_resource type="Theme" id="Theme_0hncm"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 10
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("3_yxhbc")
+Button/styles/focus = SubResource("StyleBoxFlat_kmq4u")
+Button/styles/hover = SubResource("StyleBoxFlat_nv0gy")
+Button/styles/normal = SubResource("StyleBoxFlat_nv0gy")
+Button/styles/pressed = SubResource("StyleBoxFlat_nv0gy")
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mpn31"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 10
@@ -38,7 +89,9 @@ corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 expand_margin_top = 10.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_60sr4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwyln"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+expand_margin_top = 10.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onafi"]
 content_margin_top = 20.0
@@ -73,7 +126,7 @@ Button/constants/outline_size = 15
 Button/font_sizes/font_size = 64
 Button/fonts/font = ExtResource("4_d64nc")
 Button/styles/disabled = SubResource("StyleBoxFlat_mpn31")
-Button/styles/focus = SubResource("StyleBoxEmpty_60sr4")
+Button/styles/focus = SubResource("StyleBoxFlat_dwyln")
 Button/styles/hover = SubResource("StyleBoxFlat_onafi")
 Button/styles/normal = SubResource("StyleBoxFlat_mpn31")
 Button/styles/pressed = SubResource("StyleBoxFlat_bi3wx")
@@ -256,6 +309,36 @@ theme_override_constants/margin_bottom = 50
 [node name="VBoxContainer" type="VBoxContainer" parent="TextManager/MarginContainer"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Buttons" type="HBoxContainer" parent="TextManager/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = -5
+alignment = 1
+
+[node name="First" type="Button" parent="TextManager/MarginContainer/VBoxContainer/Buttons"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = SubResource("Theme_i2fll")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+text = "1"
+
+[node name="Second" type="Button" parent="TextManager/MarginContainer/VBoxContainer/Buttons"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = SubResource("Theme_0hncm")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+text = "2"
 
 [node name="Title" type="Label" parent="TextManager/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(600, 0)
@@ -267,7 +350,7 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Description" type="ScrollContainer" parent="TextManager/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(587.175, 500)
+custom_minimum_size = Vector2(587.175, 400)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("3_ai7yt")
@@ -280,6 +363,13 @@ theme = ExtResource("3_ai7yt")
 text = "è ☰ (乾 qián)Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="Author" type="Label" parent="TextManager/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_ai7yt")
+theme_override_colors/font_color = Color(0.843137, 0.67451, 0.12549, 1)
+text = "Scritto da: X"
+horizontal_alignment = 1
 
 [node name="Reset" type="Button" parent="TextManager/MarginContainer/VBoxContainer"]
 layout_mode = 2
