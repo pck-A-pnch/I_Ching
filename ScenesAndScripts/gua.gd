@@ -17,6 +17,7 @@ extends Control
 @onready var yao_6 = $Frame/MarginContainer/HBoxContainer/Yao6
 
 @onready var hbox = $Frame/MarginContainer/HBoxContainer
+@onready var animation_player = $AnimationPlayer
 
 func show_yao():
 	var yaos = [yao_1, yao_2, yao_3, yao_4, yao_5, yao_6]
@@ -39,14 +40,17 @@ func show_yao():
 		if Global.binary == 0:
 			if Global.coin_flipper.tails == 3:
 				yao.texture = load("res://Assets/Art/straightLine.svg")
+				Global.id2 += "1"
 			else:
 				yao.texture = load("res://Assets/Art/separatedLine.svg")
+				Global.id2 += "0"
 		else:
 			if Global.coin_flipper.heads == 3:
 				yao.texture = load("res://Assets/Art/separatedLine.svg")
+				Global.id2 += "0"
 			else:
 				yao.texture = load("res://Assets/Art/straightLine.svg")
-			Global.id2 += str(Global.binary)
+				Global.id2 += "1"
 		yao.show()
 		show_yao_sound.play()
 		var tween = create_tween()
@@ -69,3 +73,18 @@ func _on_result_board_reset():
 		yao.hide()
 		yao.modulate = Color(1, 1, 1, 0)
 	hbox.modulate = Color(1,1,1,1)
+
+func _process(_delta):
+	if Global.text_manager.is_visible_in_tree():
+		if type == 1:
+			if Global.text_manager.id == Global.id:
+				animation_player.play("flash")
+			else:
+				animation_player.play("RESET")
+		elif type == 2:
+			if Global.text_manager.id == Global.id2:
+				animation_player.play("flash")
+			else:
+				animation_player.play("RESET")
+	elif animation_player.is_playing():
+		animation_player.play("RESET")

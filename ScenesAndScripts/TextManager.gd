@@ -4,6 +4,12 @@ extends PanelContainer
 @onready var description = $MarginContainer/VBoxContainer/Description/Description
 @onready var author = $MarginContainer/VBoxContainer/Author
 
+@onready var buttons = $MarginContainer/VBoxContainer/Buttons
+@onready var first = $MarginContainer/VBoxContainer/Buttons/First
+@onready var second = $MarginContainer/VBoxContainer/Buttons/Second
+
+@onready var click = $"../Sounds/Click"
+
 var file_path = "res://Assets/iChing.csv"
 
 var titles : Array = []
@@ -11,13 +17,12 @@ var descriptions : Array = []
 var ids : Array = []
 var authors : Array = []
 
-var buttonIndexToId : Dictionary = {
-1: Global.id,
-2: Global.id2
-}
+var id : String
+var buttonIndex : int
 
 func _ready():
 	import_csv()
+	Global.text_manager = self
 
 func import_csv():
 	if FileAccess.file_exists(file_path):
@@ -37,10 +42,36 @@ func import_csv():
 	
 
 func _draw():
+	update_text()
+	if Global.id == Global.id2:
+		buttons.hide()
+	else:
+		buttons.show()
+
+func update_text():
+	if buttonIndex == 1:
+		id = Global.id
+		first.disabled = true
+		second.disabled = false
+	else:
+		id = Global.id2
+		first.disabled = false
+		second.disabled = true
 	var index
 	for i in ids.size():
-		if Global.id == ids[i]:
+		if id == ids[i]:
 			index = i
 	title.text = str(index) + ". " + titles[index]
 	description.text = descriptions[index]
 	author.text = "Scritto da: " + authors[index]
+
+
+func _on_first_pressed():
+	click.play()
+	buttonIndex = 1
+	update_text()
+
+func _on_second_pressed():
+	click.play()
+	buttonIndex = 2
+	update_text()

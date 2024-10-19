@@ -49,6 +49,7 @@ func flip():
 		flip_b.disabled = true
 		await get_tree().create_timer(0.5).timeout
 		show_board.emit()
+		Global.text_manager.buttonIndex = 1
 
 
 func flip_random_coin(coin : TextureRect):

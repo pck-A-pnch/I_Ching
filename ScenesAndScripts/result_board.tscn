@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dhxqdfxt4k8xn"]
+[gd_scene load_steps=32 format=3 uid="uid://dhxqdfxt4k8xn"]
 
 [ext_resource type="Script" path="res://ScenesAndScripts/result_board.gd" id="1_08047"]
 [ext_resource type="Theme" uid="uid://ctsjp2t1ym3el" path="res://ScenesAndScripts/Titles.tres" id="1_ndlyx"]
@@ -26,16 +26,50 @@ corner_radius_bottom_left = 100
 [sub_resource type="Theme" id="Theme_hrjuh"]
 Panel/styles/panel = SubResource("StyleBoxFlat_id6sh")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6u6d"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q51jd"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eewra"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
-border_color = Color(0.380392, 0.380392, 0.380392, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_bottom_left = 25
+expand_margin_top = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6u6d"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1ntk"]
+bg_color = Color(0.481789, 0.481789, 0.481789, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_bottom_left = 25
+expand_margin_top = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mmwlh"]
+content_margin_top = 5.0
+bg_color = Color(0.376471, 0.376471, 0.376471, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 15
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_bottom_left = 25
+expand_margin_top = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_laqdw"]
+bg_color = Color(0.481789, 0.481789, 0.481789, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 25
 corner_radius_bottom_left = 25
 expand_margin_top = 5.0
@@ -46,21 +80,56 @@ Button/colors/font_outline_color = Color(0, 0, 0, 1)
 Button/constants/outline_size = 10
 Button/font_sizes/font_size = 32
 Button/fonts/font = ExtResource("3_yxhbc")
+Button/styles/disabled = SubResource("StyleBoxFlat_eewra")
 Button/styles/focus = SubResource("StyleBoxFlat_x6u6d")
-Button/styles/hover = SubResource("StyleBoxFlat_q51jd")
-Button/styles/normal = SubResource("StyleBoxFlat_q51jd")
-Button/styles/pressed = SubResource("StyleBoxFlat_q51jd")
+Button/styles/hover = SubResource("StyleBoxFlat_q1ntk")
+Button/styles/normal = SubResource("StyleBoxFlat_mmwlh")
+Button/styles/pressed = SubResource("StyleBoxFlat_laqdw")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmq4u"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv0gy"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q51jd"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
-border_color = Color(0.380392, 0.380392, 0.380392, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+expand_margin_top = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmq4u"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3xb0"]
+bg_color = Color(0.482353, 0.482353, 0.482353, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+expand_margin_top = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahi6t"]
+content_margin_top = 5.0
+bg_color = Color(0.376028, 0.376028, 0.376028, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 15
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+expand_margin_top = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5wtp"]
+bg_color = Color(0.482353, 0.482353, 0.482353, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 expand_margin_top = 5.0
@@ -71,10 +140,11 @@ Button/colors/font_outline_color = Color(0, 0, 0, 1)
 Button/constants/outline_size = 10
 Button/font_sizes/font_size = 32
 Button/fonts/font = ExtResource("3_yxhbc")
+Button/styles/disabled = SubResource("StyleBoxFlat_q51jd")
 Button/styles/focus = SubResource("StyleBoxFlat_kmq4u")
-Button/styles/hover = SubResource("StyleBoxFlat_nv0gy")
-Button/styles/normal = SubResource("StyleBoxFlat_nv0gy")
-Button/styles/pressed = SubResource("StyleBoxFlat_nv0gy")
+Button/styles/hover = SubResource("StyleBoxFlat_q3xb0")
+Button/styles/normal = SubResource("StyleBoxFlat_ahi6t")
+Button/styles/pressed = SubResource("StyleBoxFlat_b5wtp")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mpn31"]
 bg_color = Color(1, 1, 1, 1)
@@ -313,31 +383,33 @@ theme_override_constants/separation = 15
 
 [node name="Buttons" type="HBoxContainer" parent="TextManager/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = -5
+theme_override_constants/separation = -1
 alignment = 1
 
 [node name="First" type="Button" parent="TextManager/MarginContainer/VBoxContainer/Buttons"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 theme = SubResource("Theme_i2fll")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 text = "1"
 
 [node name="Second" type="Button" parent="TextManager/MarginContainer/VBoxContainer/Buttons"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 theme = SubResource("Theme_0hncm")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 text = "2"
 
 [node name="Title" type="Label" parent="TextManager/MarginContainer/VBoxContainer"]
@@ -395,4 +467,6 @@ volume_db = -10.0
 pitch_scale = 1.25
 bus = &"SFX"
 
+[connection signal="pressed" from="TextManager/MarginContainer/VBoxContainer/Buttons/First" to="TextManager" method="_on_first_pressed"]
+[connection signal="pressed" from="TextManager/MarginContainer/VBoxContainer/Buttons/Second" to="TextManager" method="_on_second_pressed"]
 [connection signal="pressed" from="TextManager/MarginContainer/VBoxContainer/Reset" to="." method="_on_reset_pressed"]

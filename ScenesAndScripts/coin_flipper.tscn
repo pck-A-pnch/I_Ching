@@ -126,8 +126,9 @@ text = "LANCIA!"
 [node name="Prompt" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_h4ofu")
-text = "< teste = linea continua (o yang)
-< croci = linea spezzata (o yin)"
+text = "2 monete uguali = stessa linea su entrambi gli esagrammi
+3 monete uguali = linea opposta sul secondo esagramma
+Testa = linea continua; Croce = linea spezzata"
 horizontal_alignment = 1
 
 [node name="Sounds" type="Node" parent="."]
