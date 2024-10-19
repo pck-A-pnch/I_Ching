@@ -1,0 +1,308 @@
+[gd_scene load_steps=19 format=3 uid="uid://dhxqdfxt4k8xn"]
+
+[ext_resource type="Script" path="res://ScenesAndScripts/result_board.gd" id="1_08047"]
+[ext_resource type="Theme" uid="uid://ctsjp2t1ym3el" path="res://ScenesAndScripts/Titles.tres" id="1_ndlyx"]
+[ext_resource type="Script" path="res://ScenesAndScripts/TextManager.gd" id="2_ltu7v"]
+[ext_resource type="Theme" uid="uid://d0sncsyvw210a" path="res://ScenesAndScripts/2nd text.tres" id="3_ai7yt"]
+[ext_resource type="FontFile" uid="uid://bvyetbh4mdef1" path="res://Assets/Fonts/RoundStyle-Bold.ttf" id="4_d64nc"]
+[ext_resource type="AudioStream" uid="uid://mxpyqy1irpks" path="res://Assets/Sound/UIClickNegative.mp3" id="6_ejlu1"]
+[ext_resource type="AudioStream" uid="uid://g5bt64hhi6hi" path="res://Assets/Sound/fast-whoosh-118248.mp3" id="7_0vdtw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4pvve"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_id6sh"]
+bg_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
+border_width_left = 25
+border_width_top = 25
+border_width_right = 25
+border_width_bottom = 25
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="Theme" id="Theme_hrjuh"]
+Panel/styles/panel = SubResource("StyleBoxFlat_id6sh")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mpn31"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+expand_margin_top = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_60sr4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onafi"]
+content_margin_top = 20.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bi3wx"]
+content_margin_top = 20.0
+bg_color = Color(0.72549, 0.72549, 0.72549, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="Theme" id="Theme_2dhhg"]
+Button/colors/font_disabled_color = Color(0.827451, 0.827451, 0.827451, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 15
+Button/font_sizes/font_size = 64
+Button/fonts/font = ExtResource("4_d64nc")
+Button/styles/disabled = SubResource("StyleBoxFlat_mpn31")
+Button/styles/focus = SubResource("StyleBoxEmpty_60sr4")
+Button/styles/hover = SubResource("StyleBoxFlat_onafi")
+Button/styles/normal = SubResource("StyleBoxFlat_mpn31")
+Button/styles/pressed = SubResource("StyleBoxFlat_bi3wx")
+
+[sub_resource type="Animation" id="Animation_72uw7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextManager:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextManager/MarginContainer/VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextManager:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextManager/MarginContainer/VBoxContainer/Reset:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_8ogc3"]
+resource_name = "show"
+length = 1.1
+step = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextManager:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextManager/MarginContainer/VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextManager:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextManager/MarginContainer/VBoxContainer/Reset:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.09012, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sounds/Whoosh:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_puqs7"]
+_data = {
+"RESET": SubResource("Animation_72uw7"),
+"show": SubResource("Animation_8ogc3")
+}
+
+[node name="ResultBoard" type="Control"]
+visible = false
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_08047")
+
+[node name="TextManager" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(800, 850)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -425.0
+offset_right = 400.0
+offset_bottom = 425.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(403, 441)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4pvve")
+script = ExtResource("2_ltu7v")
+
+[node name="Panel" type="Panel" parent="TextManager"]
+layout_mode = 2
+theme = SubResource("Theme_hrjuh")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextManager"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextManager/MarginContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="TextManager/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme = ExtResource("1_ndlyx")
+theme_override_font_sizes/font_size = 50
+text = "24. THE PRINCESS"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Description" type="ScrollContainer" parent="TextManager/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(587.175, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_ai7yt")
+horizontal_scroll_mode = 0
+
+[node name="Description" type="Label" parent="TextManager/MarginContainer/VBoxContainer/Description"]
+custom_minimum_size = Vector2(590, 450)
+layout_mode = 2
+theme = ExtResource("3_ai7yt")
+text = "è ☰ (乾 qián)Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Reset" type="Button" parent="TextManager/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme = SubResource("Theme_2dhhg")
+disabled = true
+text = "RICOMINCIA"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_puqs7")
+}
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="Click" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("6_ejlu1")
+volume_db = -10.0
+
+[node name="Whoosh" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("7_0vdtw")
+volume_db = -10.0
+pitch_scale = 1.25
+bus = &"SFX"
+
+[connection signal="pressed" from="TextManager/MarginContainer/VBoxContainer/Reset" to="." method="_on_reset_pressed"]

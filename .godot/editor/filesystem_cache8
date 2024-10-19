@@ -1,0 +1,49 @@
+fc8a56933c4b1c8d796fdb8f7a9f9475
+::res://::1729331859
+default_bus_layout.tres::AudioBusLayout::7028906507246178514::1727363198::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1728317337::0::1::::<><>::
+icon.svg::CompressedTexture2D::8427231233224487912::1727187579::1727187584::1::::<><>::
+::res://Assets/::1728416718
+iChing. id.translation::OptimizedTranslation::5630835026359511849::1728416709::0::1::::<><>::
+iChing.csv::::3222040877130733688::1728416643::1728416718::0::::<><>::
+iChing.descrizione.translation::OptimizedTranslation::7038326581678373910::1728416710::0::1::::<><>::
+iChing.numero.translation::OptimizedTranslation::3836750783967857162::1728416709::0::1::::<><>::
+iChing.titolo.translation::OptimizedTranslation::5740521411405622910::1728416710::0::1::::<><>::
+::res://Assets/Art/::1727365478
+backgroundTile.png::CompressedTexture2D::4903386590004588761::1727254871::1727254872::1::::<><>::
+backgroundTile.svg::CompressedTexture2D::1212015146509159494::1727258406::1727269242::1::::<><>::
+Bamboo.svg::CompressedTexture2D::4049721587027798705::1727255630::1727255636::1::::<><>::
+coinCross.svg::CompressedTexture2D::4910160198920983985::1727189946::1727193717::1::::<><>::
+coinHeads.svg::CompressedTexture2D::2496255604805670663::1727197922::1727197982::1::::<><>::
+frame.svg::CompressedTexture2D::6994849237226282724::1727193603::1727193605::1::::<><>::
+separatedLine.svg::CompressedTexture2D::3134205594056578185::1727197084::1727197154::1::::<><>::
+soundOff.svg::CompressedTexture2D::507464788874512780::1727365338::1727365478::1::::<><>::
+soundOn.svg::CompressedTexture2D::3010416507587819460::1727365291::1727365478::1::::<><>::
+straightLine.svg::CompressedTexture2D::5388950652856678003::1727196675::1727197154::1::::<><>::
+::res://Assets/Fonts/::1728316543
+Cheese Burger.otf::FontFile::7378464223922909086::1728316526::1728316543::1::::<><>::
+RoundStyle-Bold.ttf::FontFile::3910208328915241740::1727253865::1727253884::1::::<><>::
+Stimcard.ttf::FontFile::2241797559507991156::1727253883::1727253884::1::::<><>::
+::res://Assets/Sound/::1727363126
+book_page-45210.mp3::AudioStreamMP3::4148890530369714186::1727200522::1727200534::1::::<><>::
+coin-flip-shimmer-85750.mp3::AudioStreamMP3::4906041219823429683::1727200466::1727200534::1::::<><>::
+fast-whoosh-118248.mp3::AudioStreamMP3::483160714877882434::1727363111::1727363126::1::::<><>::
+UIClickNegative.mp3::AudioStreamMP3::890701304586583786::1712857869::1727362653::1::::<><>::
+UIClickPositive.mp3::AudioStreamMP3::6533565819397582230::1712857813::1727362653::1::::<><>::
+::res://Exports/::1727258036
+::res://Exports/Android/::1728317336
+::res://Exports/Windows/::1728317239
+::res://ScenesAndScripts/::1728416849
+2nd text.tres::Theme::8951935817577206546::1728316839::0::1::::<><>::uid://ddegh0j6c43hy::::res://Assets/Fonts/Cheese Burger.otf
+background.tscn::PackedScene::482837301265956793::1728416849::0::1::::<><>::uid://cb4icchp5sqtd::::res://Assets/Art/backgroundTile.png<>uid://bxxyk8h7j0elt::::res://Assets/Art/Bamboo.svg
+coin_flipper.gd::GDScript::-1::1727790115::0::1::::<>Control<>::
+coin_flipper.tscn::PackedScene::1989539125336857559::1728416849::0::1::::<><>::res://ScenesAndScripts/coin_flipper.gd<>uid://cb7rvd8oy1pqf::::res://Assets/Art/coinCross.svg<>uid://bvyetbh4mdef1::::res://Assets/Fonts/RoundStyle-Bold.ttf<>uid://cb5r1ueajpgtn::::res://Assets/Sound/coin-flip-shimmer-85750.mp3<>uid://667cwqq4m2ke::::res://Assets/Fonts/Stimcard.ttf
+Global.gd::GDScript::-1::1727240210::0::1::::<>Node<>::
+gua.gd::GDScript::-1::1727252533::0::1::::<>Control<>::
+gua.tscn::PackedScene::597201856969326706::1728416849::0::1::::<><>::res://ScenesAndScripts/gua.gd<>uid://c6wme6uf12qee::::res://Assets/Art/frame.svg<>uid://ci1ph21wmvs88::::res://Assets/Art/straightLine.svg<>uid://bkwh545ylwvrt::::res://Assets/Art/separatedLine.svg<>uid://b0d0vdy4hddkc::::res://Assets/Sound/book_page-45210.mp3
+main.gd::GDScript::-1::1727794365::0::1::::<>Control<>::
+main.tscn::PackedScene::6189266354023095630::1728416849::0::1::::<><>::uid://g45i3lrmr650::::res://ScenesAndScripts/background.tscn<>res://ScenesAndScripts/main.gd<>uid://3l0oibljbbmd::::res://ScenesAndScripts/coin_flipper.tscn<>uid://ctsjp2t1ym3el::::res://ScenesAndScripts/Titles.tres<>uid://irj3enpsjqqk::::res://ScenesAndScripts/gua.tscn<>uid://ddegh0j6c43hy::::res://Assets/Fonts/Cheese Burger.otf<>uid://dhxqdfxt4k8xn::::res://ScenesAndScripts/result_board.tscn<>uid://bi5jec1svqde7::::res://Assets/Art/soundOn.svg<>uid://hh24u2c0xwky::::res://Assets/Art/soundOff.svg
+result_board.gd::GDScript::-1::1727363211::0::1::::<>Control<>::
+result_board.tscn::PackedScene::7699041773204593887::1728416849::0::1::::<><>::res://ScenesAndScripts/result_board.gd<>uid://ctsjp2t1ym3el::::res://ScenesAndScripts/Titles.tres<>res://ScenesAndScripts/TextManager.gd<>uid://d0sncsyvw210a::::res://ScenesAndScripts/2nd text.tres<>uid://bvyetbh4mdef1::::res://Assets/Fonts/RoundStyle-Bold.ttf<>uid://mxpyqy1irpks::::res://Assets/Sound/UIClickNegative.mp3<>uid://g5bt64hhi6hi::::res://Assets/Sound/fast-whoosh-118248.mp3
+TextManager.gd::GDScript::-1::1728416849::0::1::::<>PanelContainer<>::
+Titles.tres::Theme::6144162884621000035::1728316646::0::1::::<><>::uid://bvyetbh4mdef1::::res://Assets/Fonts/RoundStyle-Bold.ttf

@@ -1,0 +1,220 @@
+[gd_scene load_steps=22 format=3 uid="uid://cugekvl7dp8og"]
+
+[ext_resource type="PackedScene" uid="uid://g45i3lrmr650" path="res://ScenesAndScripts/background.tscn" id="1_5xq1l"]
+[ext_resource type="Script" path="res://ScenesAndScripts/main.gd" id="1_vc41i"]
+[ext_resource type="PackedScene" uid="uid://3l0oibljbbmd" path="res://ScenesAndScripts/coin_flipper.tscn" id="3_3fbkc"]
+[ext_resource type="Theme" uid="uid://ctsjp2t1ym3el" path="res://ScenesAndScripts/Titles.tres" id="3_8rgjv"]
+[ext_resource type="PackedScene" uid="uid://irj3enpsjqqk" path="res://ScenesAndScripts/gua.tscn" id="3_kjeip"]
+[ext_resource type="FontFile" uid="uid://ddegh0j6c43hy" path="res://Assets/Fonts/Cheese Burger.otf" id="4_4jjpf"]
+[ext_resource type="PackedScene" uid="uid://dhxqdfxt4k8xn" path="res://ScenesAndScripts/result_board.tscn" id="6_k1x1a"]
+[ext_resource type="Texture2D" uid="uid://bi5jec1svqde7" path="res://Assets/Art/soundOn.svg" id="7_lu1lc"]
+[ext_resource type="Texture2D" uid="uid://hh24u2c0xwky" path="res://Assets/Art/soundOff.svg" id="8_wxcj1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i8sh6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6cq7"]
+content_margin_top = 20.0
+bg_color = Color(0.151276, 0.151276, 0.151276, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mlusb"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="Theme" id="Theme_icjgf"]
+LineEdit/colors/clear_button_color = Color(0.811765, 0.0941176, 0.0156863, 1)
+LineEdit/colors/clear_button_color_pressed = Color(1, 0.440358, 0.361117, 1)
+LineEdit/colors/font_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_outline_color = Color(0, 0, 0, 1)
+LineEdit/constants/outline_size = 10
+LineEdit/font_sizes/font_size = 46
+LineEdit/fonts/font = ExtResource("4_4jjpf")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_i8sh6")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_w6cq7")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_mlusb")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akns2"]
+bg_color = Color(0.0923971, 0.0923971, 0.0923971, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_fvm2o"]
+font_names = PackedStringArray("Sans-Serif")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_60sr4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbvhq"]
+bg_color = Color(1, 0.458824, 0.443137, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.509804, 0, 0.0784314, 1)
+corner_radius_bottom_right = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6orwx"]
+bg_color = Color(0.956863, 0, 0.180392, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.509804, 0, 0.0784314, 1)
+corner_radius_bottom_right = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwec1"]
+bg_color = Color(0.956863, 0, 0.180392, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.509804, 0, 0.0784314, 1)
+corner_radius_bottom_right = 30
+
+[sub_resource type="Theme" id="Theme_uigwr"]
+Button/colors/font_outline_color = Color(0.509804, 0, 0.0784314, 1)
+Button/constants/outline_size = 15
+Button/font_sizes/font_size = 64
+Button/fonts/font = SubResource("SystemFont_fvm2o")
+Button/styles/focus = SubResource("StyleBoxEmpty_60sr4")
+Button/styles/hover = SubResource("StyleBoxFlat_bbvhq")
+Button/styles/normal = SubResource("StyleBoxFlat_6orwx")
+Button/styles/pressed = SubResource("StyleBoxFlat_kwec1")
+
+[sub_resource type="SystemFont" id="SystemFont_bh226"]
+font_names = PackedStringArray("Sans-Serif")
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(971, 485)
+script = ExtResource("1_vc41i")
+
+[node name="Background" parent="." instance=ExtResource("1_5xq1l")]
+layout_mode = 1
+
+[node name="MiddleSection" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Question" type="LineEdit" parent="MiddleSection"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_icjgf")
+placeholder_text = "Qual è la tua domanda?"
+alignment = 1
+max_length = 75
+expand_to_text_length = true
+clear_button_enabled = true
+
+[node name="MiddleSection" type="HBoxContainer" parent="MiddleSection"]
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Gua" parent="MiddleSection/MiddleSection" instance=ExtResource("3_kjeip")]
+custom_minimum_size = Vector2(637.5, 850)
+layout_mode = 2
+
+[node name="CoinFlipper" parent="MiddleSection/MiddleSection" instance=ExtResource("3_3fbkc")]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+
+[node name="ResultBoard" parent="." instance=ExtResource("6_k1x1a")]
+layout_mode = 1
+
+[node name="UpSection" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+
+[node name="Panel" type="Panel" parent="UpSection"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_akns2")
+
+[node name="Exit" type="Button" parent="UpSection"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = SubResource("Theme_uigwr")
+text = "X"
+
+[node name="Title" type="Label" parent="UpSection"]
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("3_8rgjv")
+text = "I CHING"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DownSection" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Version" type="Label" parent="DownSection"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -36.0
+offset_right = 1920.0
+grow_vertical = 0
+theme_override_fonts/font = SubResource("SystemFont_bh226")
+theme_override_font_sizes/font_size = 32
+text = "1.0 - Edoardo Albanese"
+
+[node name="Mute" type="TextureButton" parent="DownSection"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -128.0
+grow_horizontal = 0
+grow_vertical = 0
+toggle_mode = true
+texture_normal = ExtResource("7_lu1lc")
+texture_pressed = ExtResource("8_wxcj1")
+ignore_texture_size = true
+stretch_mode = 4
+
+[connection signal="draw_yao" from="MiddleSection/MiddleSection/CoinFlipper" to="MiddleSection/MiddleSection/Gua" method="show_yao"]
+[connection signal="show_board" from="MiddleSection/MiddleSection/CoinFlipper" to="ResultBoard" method="_on_coin_flipper_show_board"]
+[connection signal="reset" from="ResultBoard" to="MiddleSection/MiddleSection/Gua" method="_on_result_board_reset"]
+[connection signal="reset" from="ResultBoard" to="MiddleSection/MiddleSection/CoinFlipper" method="_on_reset"]
+[connection signal="pressed" from="UpSection/Exit" to="." method="_on_exit_pressed"]
+[connection signal="toggled" from="DownSection/Mute" to="." method="_on_mute_toggled"]

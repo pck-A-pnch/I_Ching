@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ctsjp2t1ym3el"]
+
+[ext_resource type="FontFile" uid="uid://bvyetbh4mdef1" path="res://Assets/Fonts/RoundStyle-Bold.ttf" id="1_fhi0l"]
+
+[resource]
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 18
+Label/font_sizes/font_size = 70
+Label/fonts/font = ExtResource("1_fhi0l")

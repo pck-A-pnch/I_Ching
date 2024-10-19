@@ -1,0 +1,6 @@
+res://ScenesAndScripts/main.tscn
+res://ScenesAndScripts/background.tscn
+res://ScenesAndScripts/coin_flipper.tscn
+res://ScenesAndScripts/gua.tscn
+res://ScenesAndScripts/result_board.tscn
+res://ScenesAndScripts/coin_flipper.gd
